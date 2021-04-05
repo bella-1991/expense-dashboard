@@ -1,0 +1,206 @@
+.dashboard {
+    display: flex;    
+    margin: 50px auto;
+
+    &__section {
+        flex: 0 1 48%;
+        margin: 0 auto;
+        box-shadow: 0 0 20px 0 rgba(0,0,0,0.15);
+
+        @media screen and (max-width: 768px) {
+            flex: 1;
+            margin: 0 0 30px;
+            min-height: 300px;
+
+            &:last-of-type {
+                margin: 0;
+            }
+        }
+    }
+
+    &__header.card-header {
+        background-color: var(--sub-colour);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__header-icon {
+        height: 4em;
+        width: 4em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin-right: 15px;
+
+        @media screen and (max-width: 768px) {
+            height: 3em;
+            width: 3em;
+        }
+
+        svg.svg-inline--fa  {
+            height: 2em;
+            width: 2em;
+
+            &.fa-file-invoice-dollar {
+                path {
+                    fill: #69b145;
+                }
+            }
+
+            &.fa-clock {
+                path {
+                    fill: #ccaa31;
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                height: 1em;
+                width: 1em;
+            }
+        }
+
+        &.approved__header-icon {
+            background: #DEF6CE;
+        }
+
+        &.pending__header-icon {
+            background: #FFF2C3;
+        }
+    }
+
+    &__header-text {
+        color: var(--primary-colour);
+        flex: 1;
+    }
+
+    &__header-title {
+        margin-bottom: 5px;
+    }
+
+    &__header-price {
+        font-size: 22px;
+        font-weight: 700;
+
+        @media screen and (max-width: 768px) {
+            font-size: 20px;
+        }
+    }
+
+    &__header-cta {
+        text-align: right;
+    }
+
+    &__body {
+        position: relative;
+    }
+
+    &__loader {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: 0;
+        top: 0;
+    }
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+
+        &__header,
+        &__body {
+            padding: 15px;
+        }
+    }
+}
+
+.pending {
+    &__header-cta {
+        color: var(--primary-colour);
+    }
+
+    &__view-all {
+        margin-bottom: 10px;
+
+        a {
+            color: var(--primary-colour);
+            border-bottom: 1px solid var(--primary-colour);
+
+            &:hover,
+            &:focus {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.expense{
+    &__item {    
+        display: flex;
+        justify-content: space-between;
+        background: #F5F6FA;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        color: var(--primary-colour);        
+        transition: all ease-in-out 0.5s;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+
+    &__section {
+        &--cta { 
+            text-align: right;
+
+            @media screen and (max-width: 768px) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 10px 0 0;
+            }
+        }
+    }
+
+    &__title {
+        color: #2561ce;
+    }
+
+    &__amount {
+        svg {
+            margin-left: 5px;
+        }
+
+        @media screen and (max-width: 768px) {
+            margin: 0;
+        }
+    }
+
+    &__actions {
+        display: flex;
+    }
+
+    &__button.btn.btn-primary {
+        font-size: 14px;
+        display: inline-block;
+        vertical-align: middle;
+        background: #8EB959;
+        color: var(--sub-colour);
+        border-color: #8EB959;
+        padding: 2px 10px;
+
+        &:last-of-type {
+            margin-left: 10px;
+            background: #F66262;
+            border-color: #F66262;
+        }
+        
+        svg {
+            margin-right: 5px;
+        }
+    }
+}

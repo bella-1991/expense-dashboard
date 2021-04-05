@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.btn {
+  &:hover,
+  &:focus {
+    box-shadow: none;
+    background: transparent;
+    border-color: transparent;
+    outline: none;
+  }
+
+  &:active:not(:disabled):not(.disabled) {
+    box-shadow: none;
+    background: transparent;
+    border-color: transparent;
+    outline: none;
+  }
+
+  &.btn-dark,
+  &.btn-primary {
+    &:focus {
+      box-shadow: none;
+    }
+
+    &:active:not(:disabled):not(.disabled) {
+      color: inherit;
+      background: transparent;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.cart-popover {
+  max-width: 100%;
+  min-width: 350px;
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button {
+    padding: 10px;
+    min-width: 140px;
+    border: 1px solid var(--primary-colour);
+    text-align: center;
+    border-radius: 4px;
+    color: var(--primary-colour);
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: var(--primary-colour);
+    }    
+
+    &--checkout {
+      color: var(--sub-colour);
+      background: var(--primary-colour);
+      
+      &:hover,
+      &:focus {
+        color: var(--sub-colour);
+      }
+    }
+    
+  }
+
+  &__empty-text {
+    text-align: center;
+    padding: 10px;
+  }
+
+  &__gross-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+  }
+
+  &__total {
+    border-top: 1px solid;
+    padding: 10px 0 0;
+  }
+}
+
+.expense-modal {
+  .modal-footer {
+    .btn {
+      &.btn-primary {
+        &:hover,
+        &:focus,
+        &:active:not(:disabled):not(.disabled) {
+          background: var(--blue);
+          color: var(--sub-colour);
+        }
+      }
+
+      &.btn-secondary {
+        &:hover,
+        &:focus,
+        &:active:not(:disabled):not(.disabled) {
+          background: var(--gray);
+          color: var(--sub-colour);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h4 {
+    font-size: 18px;
+  }
+
+  h5 {
+    font-size: 16px;
+  }
+}

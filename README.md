@@ -2,6 +2,6 @@
 Expense Dashboard 
 
 # Getting Started
-$ Clone Repo.
-$ yarn install.
-$ npm start.
+1. Clone Repo.
+2. yarn install.
+3. npm start.
